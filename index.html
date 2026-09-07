@@ -301,7 +301,7 @@ const CONFIG = {
       <div class="fld"><label id="lb-email"></label><input id="b-email" type="email" required></div>
       <div class="fld"><label id="lb-phone"></label><input id="b-phone" type="tel"></div>
       <div class="fld"><label id="lb-project"></label><select id="b-project"></select></div>
-      <div class="fld"><label id="lb-date"></label><input id="b-date" type="date"></div>
+      <div class="fld"><label id="lb-date"></label><input id="b-date" type="text" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'"></div>
       <div class="fld"><label id="lb-time"></label><select id="b-time"></select></div>
     </div>
     <div class="fld"><label id="lb-msg"></label><textarea id="b-msg" rows="3"></textarea></div>
