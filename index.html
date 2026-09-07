@@ -540,7 +540,12 @@ let activeFilter="all";
 function applyStatic(){
   var loc = (lang==='gr') ? 'el' : 'en-GB';
   document.documentElement.lang = loc;
-  var bdate=document.getElementById('b-date'); if(bdate) bdate.lang=loc;
+  var bdate=document.getElementById('b-date'); 
+  if(bdate) { 
+    bdate.lang=loc; 
+    if(!bdate.value) bdate.type='text'; 
+    bdate.placeholder=t('datePlaceholder'); 
+  }
   const set=(id,v)=>{const el=document.getElementById(id); if(el) el.textContent=v;};
   set('nav-projects',t('navProjects')); set('nav-contact',t('navContact')); set('nav-cta',t('book'));
   set('nav-about',t('navAbout'));
